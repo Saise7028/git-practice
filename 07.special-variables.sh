@@ -7,4 +7,4 @@ echo "Present working directory: $PWD"
 echo "user home directory: $HOME"
 echo "PID of script executing now: $$"
 Sleep 100 &
-echo "PID of backend script executing: $!" 
+echo "PID of last script executing: $!" 
