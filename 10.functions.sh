@@ -20,7 +20,7 @@ VALIDATE(){
 }
 
 # dnf list installed git
-# if [ $1 -ne 0 ]
+# if [ $? -ne 0 ]
 # echo "if git is not installed.going to install it"
 # dnf install git -y
 # VALIDATE $? installing git
@@ -29,12 +29,12 @@ VALIDATE(){
 # fi
 
 # dnf list installed mysql
-# if [ $1 -ne 0 ]
+# if [ $? -ne 0 ]
 # echo "mysql not installed.going to install it"
 # dnf install mysql -y
 # VALIDATE $? installing mysql
 # else
-# echo "my sql already installed,nothing to do.."
+#     echo "my sql already installed,nothing to do.."
 # fi
 
 
