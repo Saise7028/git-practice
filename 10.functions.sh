@@ -19,6 +19,8 @@ VALIDATE(){
         echo "$2 is...success"    
 }
 
+CHECK_ROOT
+
 dnf list installed git
 if [ $? -ne 0 ]
 echo "if git is not installed.going to install it"
