@@ -1,8 +1,8 @@
 #!/bin/bash
 
-Number1=$6
-Number2=$14
+NUMBER1=$1
+NUMBER2=$2
 
-sum=$((Number1+Number2))
+SUM=$(($NUMBER1+$NUMBER2))
 
-echo "$Number1 and $Number2 is sum of:: "
+echo "Total of $NUMBER1 and $NUMBER2 is: $SUM"
