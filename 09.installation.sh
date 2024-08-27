@@ -24,6 +24,8 @@ else
     echo "git is already installed nothing to do.."
 fi
 
+
+
 dnf list installed mysql # check mysql installed are not
 if [ $? -ne 0 ]
 then 
@@ -39,4 +41,3 @@ fi
 else 
     echo "mysql already installed.nothing to do.."
 fi
-                
