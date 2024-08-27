@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$(ID -u)
+USERID=$(id -u)
 
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
