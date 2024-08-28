@@ -26,6 +26,7 @@ VALIDATE(){
 
 CHECK_ROOT
 
+dnf list installed git
 if [ $? -ne 0 ]
   then
       echo "git is not installed.going to install it"
@@ -35,6 +36,7 @@ VALIDATE $? "installing the git"
       echo "git is already installed.nothing to do.."
 fi
 
+dnf list installed mysql
 if [ $? -ne 0 ]
   then
       echo "mysql is not installed.going to install it"
