@@ -2,9 +2,9 @@
 
 USERID=$(id -u)
 
-RED="\e[31m"
-GREEN="\e[32m"
-NORMAL="\e[0m"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
