@@ -33,7 +33,7 @@ if [ $? -ne 0 ]
 dnf install git -y
 VALIDATE $? "installing the git"
   else 
-      echo "git is already installed.nothing to do.."
+      echo "git is already installed.nothing to do."
 fi
 
 dnf list installed mysql
