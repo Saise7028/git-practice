@@ -43,7 +43,7 @@ if [ $? -ne 0 ]
 dnf install mysql -y
 VALIDATE $? "installing the mysql"
    else
-       echo "$R mysql is already installed.then nothing to do.."
+       echo "mysql is already installed.then nothing to do.."
 fi
 
 
