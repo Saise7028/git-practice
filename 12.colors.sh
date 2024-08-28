@@ -2,9 +2,9 @@
 
 USERID=$(id -u)
 
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
+RED="\e[31m"
+GREEN="\e[32m"
+NORMAL="\e[0m"
 
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
@@ -33,7 +33,7 @@ if [ $? -ne 0 ]
 dnf install git -y
 VALIDATE $? "installing the git"
   else 
-      echo "$R git is already installed.nothing to do. $N"
+      echo -e "$R git is already installed.nothing to do. $N"
 fi
 
 dnf list installed mysql
@@ -43,7 +43,7 @@ if [ $? -ne 0 ]
 dnf install mysql -y
 VALIDATE $? "installing the mysql"
    else
-       echo "$R mysql is already installed.then nothing to do.. $N"
+       echo -e "$R mysql is already installed.then nothing to do.. $N"
 fi
 
 
