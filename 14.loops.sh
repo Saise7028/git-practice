@@ -26,7 +26,7 @@ VALIDATE(){
 
 CHECK_ROOT
 
-sh 14.loops.sh git mysql postfix nginx
+# sh 14.loops.sh git mysql postfix nginx
 for packages in $@ # pass the all arguments in the scipt
    do
      echo "$packages"
