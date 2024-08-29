@@ -26,7 +26,7 @@ VALIDATE(){
 
 CHECK_ROOT
 
-sh 14.loops.sh 
+# sh 14.loops.sh 
 for packages in $@ # pass the all arguments in the scipt
    do
      echo "$packages"
