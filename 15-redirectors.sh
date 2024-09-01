@@ -40,6 +40,12 @@ USAGE(){
 
 CHECK_ROOT
 
+if [ $# -eq 0 ]
+then
+    USAGE
+fi
+
+
 # sh 14.loops.sh git mysql postfix nginx
 for package in $@ # pass the all arguments in the scipt
    do
