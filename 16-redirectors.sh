@@ -53,6 +53,6 @@ for package in $@
             dnf install $package -y &>>LOG_FILE
             VALIDATE $? "installing $package" 
               else 
-                  echo -e "$package is already $Y installed,nothing to do.. $N" &>>LOG_FILE
+                  echo -e "$package is already $Y installed,nothing to do.. $N" &>>$SLOG_FILE
                fi   
             done                
