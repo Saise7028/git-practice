@@ -42,7 +42,7 @@ CHECK_ROOT
 
 for package in $@
            do 
-           dnf installed $package &>>$LOG_FILE
+           dnf install $package &>>$LOG_FILE
               if [ $? -ne 0 ]
                 then 
                     echo "$package is not installed.then install it.." &>>$LOG_FILE
