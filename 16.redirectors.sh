@@ -48,7 +48,7 @@ for package in $@
            dnf list installed $package &>>$LOG_FILE
               if [ $? -ne 0 ]
                 then 
-                    echo "$package is not installed.then install it.." &>>$LOG_FILE
+                    echo "$package is not $R installed.then install it.. $N" &>>$LOG_FILE
             dnf install $package -y &>>LOG_FILE
             VALIDATE $? "installing $package" &>>LOG_FILE
               else 
