@@ -19,7 +19,7 @@ USERID=$(id -u)
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then 
-        echo " $R Run the script with root Priveleges $N" &>>$LOG_FILE
+        echo -e " $R Run the script with root Priveleges $N" &>>$LOG_FILE
         exit 1
     fi    
 }
