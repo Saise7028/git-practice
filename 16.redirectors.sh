@@ -22,9 +22,9 @@ CHECK_ROOT(){
 VALIDATE(){
        if [ $1 -ne 0 ]
          then 
-             echo "$2 is...$R Failure $N" &>>LOG_FILE
+             echo -e "$2 is...$R Failure $N" &>>LOG_FILE
              exit 1
          else
-             echo "$2 is...$G Success $N" &>>LOG_FILE
+             echo -e "$2 is...$G Success $N" &>>LOG_FILE
         fi         
 }
