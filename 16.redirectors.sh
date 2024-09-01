@@ -31,7 +31,6 @@ VALIDATE(){
 }
 
 USAGE(){
-      then 
           echo -e "$R USAGE:: $N sudo 16.redirectors.sh package1 package2..."
           exit 1    
 }
