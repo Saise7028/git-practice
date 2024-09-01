@@ -31,3 +31,25 @@ VALIDATE(){
             echo -e "$2 is...$R SUCCESS $N" &>>$LOG_FILE
       fi          
 }
+
+USAGE(){
+    echo -e "$R USAGE:: $N sudo sh 16-redirectors.sh package1 package2 ..."
+    exit 1
+}
+
+
+CHECK_ROOT
+
+# sh 14.loops.sh git mysql postfix nginx
+for package in $@ # pass the all arguments in the scipt
+   do
+      dnf list installed $package &>>$LOG_FILE
+    if [ $? -ne 0 ]
+     then 
+         echo "$package not installed.then install it"
+dnf install $package -y &>>$LOG_FILE
+VALIDATE $? "installing $package" &>>$LOG_FILE
+    else
+        echo "$package is already installed.nothing to do.." &>>$LOG_FILE 
+    fi               
+   done
