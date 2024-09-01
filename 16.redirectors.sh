@@ -31,18 +31,22 @@ VALIDATE(){
 }
 
 USAGE(){
-    if [ $# -ne 0 ]
       then 
           echo -e "$R USAGE:: $N sudo 16.redirectors.sh package1 package2..."
-          exit 1
-    fi      
+          exit 1    
 }
+
 
 CHECK_ROOT
 
+if [ $# -eq 0 ]
+then
+    USAGE
+fi
+
 for package in $@
            do 
-           dnf install $package &>>$LOG_FILE
+           dnf installed $package &>>$LOG_FILE
               if [ $? -ne 0 ]
                 then 
                     echo "$package is not installed.then install it.." &>>$LOG_FILE
@@ -50,6 +54,5 @@ for package in $@
             VALIDATE $? "installing $package" &>>LOG_FILE
               else 
                   echo -e "$package is already $Y installed.nothing to do.. $N" &>>LOG_FILE
-                  exit 1
                fi   
             done                
