@@ -48,10 +48,10 @@ for package in $@
            dnf list installed $package &>>$LOG_FILE
               if [ $? -ne 0 ]
                 then 
-                    echo "$package is not $R installed.then install it.. $N" &>>$LOG_FILE
+                    echo -e "$package is not $R installed,then install it.. $N" &>>$LOG_FILE
             dnf install $package -y &>>LOG_FILE
             VALIDATE $? "installing $package" &>>LOG_FILE
               else 
-                  echo -e "$package is already $Y installed.nothing to do.. $N" &>>LOG_FILE
+                  echo -e "$package is already $Y installed,nothing to do.. $N" &>>LOG_FILE
                fi   
             done                
