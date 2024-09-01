@@ -37,7 +37,6 @@ USAGE(){
     exit 1
 }
 
-
 CHECK_ROOT
 
 if [ $# -eq 0 ]
@@ -56,6 +55,6 @@ for package in $@ # pass the all arguments in the scipt
 dnf install $package -y &>>$LOG_FILE
 VALIDATE $? "installing $package" &>>$LOG_FILE
     else
-        echo "$package is already installed.nothing to do.." &>>$LOG_FILE 
+        echo -e "$package is already $R installed.nothing to do.. $N" &>>$LOG_FILE 
     fi               
    done
