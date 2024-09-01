@@ -5,7 +5,7 @@
 LOG_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOGS_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TMESTAMP.log"
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TMESTAMP.log"
 mkdir -p $LOG_FOLDER
 
 USERID=$(id -u)
@@ -17,7 +17,7 @@ Y="\e[33m"
 CHECK_ROOT(){
        if [ $USERID -ne 0 ]
          then
-           echo -e "$R Please run the script with root priveleages $N" &>>$LOGS_FILE
+           echo -e "$R Please run the script with root priveleages $N" &>>$LOG_FILE
            exit 1
         fi    
 }
@@ -25,9 +25,9 @@ CHECK_ROOT(){
 VALIDATE(){
       if [ $1 -ne 0 ]
         then
-          echo -e "$2 is...$R FAILURE $N" &>>$LOGS_FILE
+          echo -e "$2 is...$R FAILURE $N" &>>$LOG_FILE
           exit 1
         else
-            echo -e "$2 is...$R SUCCESS $N" &>>$LOGS_FILE
+            echo -e "$2 is...$R SUCCESS $N" &>>$LOG_FILE
       fi          
 }
