@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -e
+set -e # -e --> setting automatically exit,if we get an error in program
+       # -x --> if we get an error in program.it get execute the program in debugmode.  
 
 failure(){
     echo "Failed at: $1:$2"
