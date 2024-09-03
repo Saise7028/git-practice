@@ -1,8 +1,9 @@
 #!/bin/bash
 
 SOURCE_DIR=$1
-DESTINATION_DIR=$2
+DEST_DIR=$2
 DAYS=${3:-14} # if $3 is empty,default is 14Days
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 USAGE(){
     echo "USAGE:: 21-backup.sh <source> <destination> <days(optional)>"
@@ -21,7 +22,7 @@ if [ ! -d $SOURCE_DIR ]
       echo "source directory does not exist...please check"
 fi
 
-if [ ! -d $DESTINATION_DIR ]
+if [ ! -d $DEST_DIR ]
    then 
        echo "Detination directory does not exist...please check"
 fi
@@ -32,7 +33,8 @@ echo "files: $FILES"
 if [ ! -z $FILES ]
  then 
      echo "files are found"
-FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
+   ZIP_FILE="${DEST_DIR}/app-logs-$TIMESTAMP.zip" 
+   find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "$ZIP_FILE" -@
  else
      echo "no files older than $DAYS"
 fi         
