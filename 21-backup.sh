@@ -32,6 +32,7 @@ echo "files: $FILES"
 if [ ! -Z $FILES ]
  then 
      echo "files are found"
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
  else
      echo "no files older than $DAYS"
 fi         
