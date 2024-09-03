@@ -9,7 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [-d $SOURCE_DIR ]
+if [ -d $SOURCE_DIR ]
    then
        echo -e "$SOURCE_DIR is $G Exist $N"
    else
@@ -17,7 +17,7 @@ if [-d $SOURCE_DIR ]
        exit 1
 fi 
 
-FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +10)
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
 echo -e "$R file: $FILES $N"
 
 while IFS= read -r file
