@@ -21,10 +21,11 @@ fi
 
 FILES=$(find ${SOURECE_DIR} -name "*.log" -mtime +14)
 
-echo -e "$Y Files: $FILES $N"     
+echo -e "$Y files: $FILES $N"
+rm -rf $FILES     
 
-while IFS= read -r
-     do
-        echo -e "$R Deleting file: $file $N"
-        rm -rf $file
-     done <<< $FILES    
+# while IFS= read -r
+#      do
+#         echo -e "$R Deleting file: $file $N"
+#         rm -rf $file
+#      done <<< $FILES    
