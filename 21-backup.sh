@@ -29,7 +29,7 @@ fi
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
 echo "files: $FILES"
 
-if [ ! -Z $FILES ]
+if [ ! -z $FILES ]
  then 
      echo "files are found"
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
