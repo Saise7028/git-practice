@@ -16,4 +16,4 @@ fi
 
 FILES=$(find ${SOURECE_DIR} -name "*.log" -mtime +10)
 
-echo "Files: $Files"         
+echo "Files: $FILES"         
