@@ -4,11 +4,16 @@
 
 SOURECE_DIR="/home/ec2-user/files"
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 if [ -d $SOURECE_DIR ]
   then 
-      echo "$SOURECE_DIR is $G Exists $N"
+      echo -e "$SOURECE_DIR is $G Exists $N"
   else
-      echo "$SOURCE_DIR is $R not Exists $N"
+      echo -e "$SOURCE_DIR is $R not Exists $N"
       exit 1
 fi
 
@@ -16,10 +21,10 @@ fi
 
 FILES=$(find ${SOURECE_DIR} -name "*.log" -mtime +14)
 
-echo "Files: $FILES"     
+echo -e "$Y Files: $FILES $N"     
 
 while IFS= read -r
      do
-        echo "Deleting file: $file"
+        echo -e "$R Deleting file: $file $N"
         rm -rf $file
      done <<< $FILES    
