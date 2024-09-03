@@ -6,9 +6,9 @@ SOURECE_DIR="/home/ec2-user/files"
 
 if [ -d $SOURECE_DIR ]
   then 
-      echo "$SOURECE_DIR is Exists"
+      echo "$SOURECE_DIR is $G Exists $N"
   else
-      echo "$SOURCE_DIR is not Exists"
+      echo "$SOURCE_DIR is $R not Exists $N"
       exit 1
 fi
 
