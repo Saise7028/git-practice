@@ -14,6 +14,6 @@ fi
 
 # find -path -name <filename> -mtime n --> mtime--reperesent the meantime here '-' old time and '+'present time
 
-FILES=$(find ${SOURECE_DIR} -name "*.log" -mtime +10)
+FILES=$(find ${SOURECE_DIR} -name "*.log" -mtime +14)
 
 echo "Files: $FILES"         
