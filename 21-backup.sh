@@ -25,4 +25,6 @@ if [ ! -d $DESTINATION_DIR ]
    then 
        echo "Detination directory does not exist...please check"
 fi
-       
+
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
+echo "files: $FILES"
