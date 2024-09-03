@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+set -e
 
 echo "hello world program execution"
 echoooo "progarm is not executed"
