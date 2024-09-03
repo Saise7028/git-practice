@@ -7,7 +7,7 @@ failure(){
 }
 
 
-trap 'failure "${LINENO}" "$BASH_COMMAND"' ERR
+trap 'failure "${LINE NO}" "$BASH_COMMAND"' ERR
 
 echo "hello world program execution"
 echoooo "progarm is not executed"
